@@ -18,27 +18,28 @@ export const List = () => {
   return(
   <>
     
-      <table style={{ width: "100%" }}>
-        <tr>
-          <th>Firstname</th>
-          <th>Lastname</th>
-          <th>email</th>
-          <th>password</th>
-          <th>ocuppation</th>
-          <th>phone</th>
-        </tr>
-        {data.map((user, i) => (
-          <tr key={i}>
-            <td>{user.name}</td>
-            <td>{user.lastName}</td>
-            <td>{user.email}</td>
-            <td>{user.password}</td>
-            <td>{user.ocuppation}</td>
-            <td>{user.phone}</td>
+        <table style={{ width: "100%" }}>
+          <tr style={{ textAlign: 'left' }}>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>email</th>
+            <th>password</th>
+            <th>ocuppation</th>
+            <th>phone</th>
           </tr>
-        ))}
-      </table>
-    )
+          {data.map((user, i) => (
+            <tr key={i}>
+              <td>{user.name}</td>
+              <td>{user.lastName}</td>
+              <td>{user.email}</td>
+              <td>{user.password}</td>
+              <td>{user.ocuppation}</td>
+              <td>{user.phone}</td>
+            </tr>
+          ))}
+          
+        </table>
+      )
   </>
   );
 }
