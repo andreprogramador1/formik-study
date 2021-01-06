@@ -3,7 +3,7 @@ import { Form, Formik, Field } from 'formik'
 import { Container } from './style'
 import * as Yup from "yup";
 import api from '../../services/api'
-
+import { useParams, useHistory } from 'react-router-dom'
 
 export const Application = () => {
 
@@ -16,6 +16,8 @@ export const Application = () => {
     phone: Yup.number() 
   });
 
+ 
+
   function onSubmit(values) {
     
     const method = 'post'
@@ -23,7 +25,7 @@ export const Application = () => {
       `/users/`
     api[method](url, values)
     .then((response) => {
-      // clear()
+
       console.log(response)
     })
    
@@ -38,6 +40,7 @@ export const Application = () => {
        onSubmit={values => {
         // same shape as initial values
         onSubmit(values)
+
         console.log(values);
  
        }}

@@ -14,6 +14,20 @@ export const List = () => {
     const response = await api.get('/users')
     setData(response.data)
   }
+  
+
+  function handleFilter(id) {
+    setData(data.filter((item) => (item._id !== id)))
+  }
+
+  async function handleDelete(id) {
+    console.log(id)
+    const removedResponse = await api.delete(`/users/${id}`)
+    if(removedResponse.status === 200) {
+      handleFilter(id)
+    }
+    
+  }
 
   return(
   <>
@@ -35,6 +49,7 @@ export const List = () => {
               <td>{user.password}</td>
               <td>{user.ocuppation}</td>
               <td>{user.phone}</td>
+              <td><button onClick={ () => {handleDelete(user._id)}}>Delete</button></td>
             </tr>
           ))}
           
