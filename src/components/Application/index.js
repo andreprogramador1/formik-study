@@ -2,6 +2,7 @@ import React from 'react'
 import { Form, Formik, Field } from 'formik'
 import { Container } from './style'
 import * as Yup from "yup";
+import api from '../../services/api'
 
 
 export const Application = () => {
@@ -12,8 +13,21 @@ export const Application = () => {
     lastName: Yup.string().required('required'),
     password: Yup.number().min(5, 'Too Short!').required('Required'),
     occupation: Yup.string(),
-    phone: Yup.number('only number') 
+    phone: Yup.number() 
   });
+
+  function onSubmit(values) {
+    
+    const method = 'post'
+    const url = 
+      `/users/`
+    api[method](url, values)
+    .then((response) => {
+      // clear()
+      console.log(response)
+    })
+   
+  }
 
   return(
     <>
@@ -23,6 +37,7 @@ export const Application = () => {
        validationSchema={ SignupSchema }
        onSubmit={values => {
         // same shape as initial values
+        onSubmit(values)
         console.log(values);
  
        }}
