@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { Form, Formik, Field as input, useFormik  } from 'formik'
+import React, { useEffect } from 'react'
+import {  useFormik  } from 'formik'
 import { Container } from './style'
 import * as Yup from "yup";
 import api from '../../services/api'
@@ -19,24 +19,13 @@ export const Application = () => {
     phone: Yup.string().required('Required')
   });
 
-  // function clear(response) {
-  //   formik.setValues(response && formik.values.name = '')
-  //   // setFieldValue('name', response ? response.data.name : '')
-  //   // setFieldValue('lastName', response ? response.data.lastName : '')
-  //   // setFieldValue('email', response ? response.data.email : '')
-  //   // setFieldValue('password', response ? response.data.password : '')
-  //   // setFieldValue('phone', response ? response.data.phone : '')
-  // }
-
   
   useEffect(() => {
 
     async function getOneUser() {
-
       const response = await api.get('users/'+idParams)
       formik.setValues(response.data, false)
-      console.log(response)
-      
+      console.log(response) 
     }
     getOneUser()
   },[idParams])

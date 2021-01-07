@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import api from '../../services/api'
-import { useHistory, useParams } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 
 export const List = () => {
