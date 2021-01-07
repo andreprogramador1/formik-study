@@ -78,7 +78,7 @@ export const Application = () => {
                 value={formik.values?.name}
                 onChange={formik.handleChange}
               />
-              {formik.errors.name && <div id="feedback">{formik.errors.name}</div>}
+              {formik.errors.name && <div id="feedback" style={{ color: '#981f1fb3', marginBottom: '10px' }}>{formik.errors.name}</div>}
 
               <label>Last Name:</label>
               <input
@@ -87,7 +87,7 @@ export const Application = () => {
                 value={formik.values?.lastName}
                 onChange={formik.handleChange}
               />
-              {formik.errors.lastName && <div id="feedback">{formik.errors.lastName}</div>}
+              {formik.errors.lastName && <div id="feedback" style={{ color: '#981f1fb3', marginBottom: '10px' }}>{formik.errors.lastName}</div>}
 
               <label>Email:</label>
               <input
@@ -96,7 +96,7 @@ export const Application = () => {
                 value={formik.values?.email}
                 onChange={formik.handleChange}
               />
-              {formik.errors.email && <div id="feedback">{formik.errors.email}</div>}
+              {formik.errors.email && <div id="feedback" style={{ color: '#981f1fb3', marginBottom: '10px' }}>{formik.errors.email}</div>}
 
               <label>Password:</label>
               <input
@@ -105,7 +105,7 @@ export const Application = () => {
                 value={formik.values?.password}
                 onChange={formik.handleChange}
               />
-              {formik.errors.password && <div id="feedback">{formik.errors.password}</div>}
+              {formik.errors.password && <div id="feedback" style={{ color: '#981f1fb3', marginBottom: '10px' }}>{formik.errors.password}</div>}
 
               <label>Occupation:</label>
               <input
@@ -114,7 +114,7 @@ export const Application = () => {
                 value={formik.values?.occupation}
                 onChange={formik.handleChange}
               />
-              {formik.errors.occupation && <div id="feedback">{formik.errors.occupation}</div>}
+              {formik.errors.occupation && <div id="feedback" style={{ color: '#981f1fb3', marginBottom: '10px' }}>{formik.errors.occupation}</div>}
 
               <label>Phone:</label>
               <input
@@ -123,7 +123,7 @@ export const Application = () => {
                 value={formik.values?.phone}
                 onChange={formik.handleChange}
               />
-              {formik.errors.phone && <div id="feedback">{formik.errors.phone}</div>}
+              {formik.errors.phone && <div id="feedback" style={{ color: '#981f1fb3', marginBottom: '10px' }}>{formik.errors.phone}</div>}
 
               
               <button type="submit" >Submit</button>

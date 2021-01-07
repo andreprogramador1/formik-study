@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.div`
     background-color: #668788;
     width: 10%;
-    padding: 20px;
+    padding: 20px 50px;
     margin: auto;
     border-radius: 7px;
     color: #1c2f2f;
@@ -41,6 +41,11 @@ export const Container = styled.div`
       margin-top: 20px;
       border-radius: 500px;
       color: white;
+      cursor: pointer;
+
+      :hover {
+        background-color: #173435;
+      }
     }
   }
 `;
