@@ -66,9 +66,10 @@ export const Application = () => {
 
   return(
     <>
-     <h1>My Form</h1>
+     
      
          <Container>
+         <h1>My Form</h1>
           <form onSubmit={formik.handleSubmit}>
               <label>Name:</label>
               <input
