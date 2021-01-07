@@ -6,7 +6,7 @@ export const Routes = () => {
   return(
     <Switch>
       <Route path="/form" exact component={Application}/>
-      <Route path="/form:id" exact component={Application}/>
+      <Route path="/form/:idParams" exact component={Application}/>
       <Route path="/list" exact component={List}/>
     </Switch>
   );

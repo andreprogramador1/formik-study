@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import api from '../../services/api'
+import { useHistory, useParams } from 'react-router-dom'
 
 
 export const List = () => {
 
   const [data, setData] = useState([])
+
+  const history = useHistory()
 
   useEffect(() => {
     getContent()
@@ -49,7 +52,8 @@ export const List = () => {
               <td>{user.password}</td>
               <td>{user.ocuppation}</td>
               <td>{user.phone}</td>
-              <td><button onClick={ () => {handleDelete(user._id)}}>Delete</button></td>
+              <td><button onClick={ () => { history.push(`/form/${user._id}`)} }>Edit</button></td>
+              <td><button onClick={ () => {handleDelete(user._id)} }>Delete</button></td>
             </tr>
           ))}
           
