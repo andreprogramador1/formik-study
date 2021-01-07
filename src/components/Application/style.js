@@ -11,9 +11,12 @@ export const Container = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
   form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 170px;
     margin: auto;
 
@@ -29,6 +32,15 @@ export const Container = styled.div`
       display: flex;
       justify-content: center;
       color: #1c2f2f;
+    }
+
+    button {
+      background-color: #1b393a;
+      border: none;
+      padding: 10px 70px;
+      margin-top: 20px;
+      border-radius: 500px;
+      color: white;
     }
   }
 `;
